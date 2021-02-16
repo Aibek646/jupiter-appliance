@@ -1,0 +1,25 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding-top: 10px;
+  border-bottom: 0.1px solid lightgray;
+  padding-bottom: 10px;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__left {
+  display: flex;
+}
+
+.header__left > img {
+  height: 85px;
+  object-fit: contain;
+}
+
+.header__right {
+  display: flex;
+  margin-top: 22px;
+}
