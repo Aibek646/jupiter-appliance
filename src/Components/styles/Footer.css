@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.upper__footer {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.first__footer > h1 {
+  font-size: 28px;
+}
