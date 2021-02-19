@@ -2,7 +2,10 @@ import React from "react";
 import "../Components/styles/Main.css";
 import Post from "./Post";
 
-const Main = () => {
+const Main = ({ history }) => {
+  const residentialPage = () => {
+    history.push("/residential");
+  };
   return (
     <div className="main">
       <div className="first__col">
@@ -15,7 +18,9 @@ const Main = () => {
           select one.
         </p>
         <div className="buttons">
-          <button style={{ marginRight: "50px" }}>Residential</button>
+          <button onClick={residentialPage} style={{ marginRight: "50px" }}>
+            Residential
+          </button>
           <button>Commercial</button>
         </div>
       </div>

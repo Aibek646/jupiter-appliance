@@ -1,13 +1,41 @@
 .footer {
+  padding: 5%;
   display: flex;
   flex-direction: column;
+  background-color: #ebbd28;
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .upper__footer {
   display: flex;
+  justify-content: space-evenly;
   margin-bottom: 40px;
 }
 
 .first__footer > h1 {
-  font-size: 28px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.first__footer {
+  width: 15%;
+}
+
+.second__footer {
+  width: 15%;
+}
+
+.second__footer > h1 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.third__footer {
+  width: 15%;
+}
+
+.third__footer > h1 {
+  margin-top: 20px;
+  font-size: 20px;
 }

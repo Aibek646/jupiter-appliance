@@ -13,7 +13,7 @@ const Header = () => {
         <img src="/Jupiter-Appliance.png" alt="Logo" />
       </div>
       <div className="header__right">
-        <HeaderOption Icon={HomeIcon} title="Home" />
+        <HeaderOption link={"/"} Icon={HomeIcon} title="Home" />
         <HeaderOption Icon={Services} title="Service" />
         <HeaderOption Icon={Review} title="Review" />
         <HeaderOption newStyle="-20px" Icon={Call} title="650-922-2494" />

@@ -1,0 +1,11 @@
+.residential {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border: red 1px solid;
+}
+
+.res__cards {
+  display: flex;
+  justify-content: center;
+}
