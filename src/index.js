@@ -3,12 +3,31 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import { BrowserRouter } from "react-router-dom";
+import residentialReducer from "./store/reducers/residential";
+import singleResidentialReducer from "./store/reducers/singleResidential";
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const rootReducer = combineReducers({
+  residential: residentialReducer,
+  singleResidential: singleResidentialReducer,
+});
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
 
   document.getElementById("root")
 );

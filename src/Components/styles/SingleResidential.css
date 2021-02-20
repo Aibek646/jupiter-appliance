@@ -1,0 +1,4 @@
+.singlePage {
+  margin-top: 40px;
+  min-height: calc(100vh - 235px);
+}

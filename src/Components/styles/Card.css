@@ -1,15 +1,16 @@
 .card {
-  padding: 80px 5px 80px 5px;
+  padding: 70px 5px 70px 5px !important;
   border: 1px solid lightgray;
   width: 10%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 40px;
   cursor: pointer;
   transition: ease-out 1s;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .card:hover {
@@ -20,5 +21,9 @@
   height: 14rem;
 
   object-fit: cover;
-  margin-top: -70px;
+  margin-top: -60px;
+}
+
+.card > h2 {
+  padding-top: 20px;
 }
