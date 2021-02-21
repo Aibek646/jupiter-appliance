@@ -21,6 +21,7 @@
   text-indent: 0.7rem;
   white-space: nowrap;
   letter-spacing: 0.7rem;
+  color: rgb(221, 158, 0);
 }
 
 .first__col > p {
@@ -72,6 +73,7 @@
   text-indent: 0.7rem;
   white-space: nowrap;
   letter-spacing: 0.2rem;
+  color: rgb(221, 158, 0);
 }
 
 .second__col > p {

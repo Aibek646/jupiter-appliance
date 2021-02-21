@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import * as actions from "../store/actions/index";
-
+import Spinner from "./UI/Loading";
 import "./styles/SingleResidential.css";
 import "../Components/styles/SingleResidential.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,8 +24,34 @@ const SingleResidential = ({ match }) => {
   }, [onInitSingleAppliance]);
 
   return (
-    <div className="singlePage">
-      <h1>Single Page</h1>
+    <div className="wrapper__singlePage">
+      <div className="singlePage">
+        {singleAppliance ? (
+          <div className="singlePage__column1">
+            <h1>{singleAppliance.name}</h1>
+
+            <img src={singleAppliance.image} alt="" />
+          </div>
+        ) : (
+          <Spinner />
+        )}
+        <div className="singlePage__column2">
+          <h1>Got one of these problems</h1>
+          <ul>
+            <li>Refrigerator is not cooling</li>
+            <li>The ice dispenser is not functioning</li>
+            <li>The water dispenser is not operational</li>
+            <li>Refrigerator is making unusually loud noises</li>
+            <button className="">Order Repair</button>
+          </ul>
+        </div>
+      </div>
+      <div className="review">
+        <h1>This is a review</h1>
+        <div>
+          <input type="text" />
+        </div>
+      </div>
     </div>
   );
 };
