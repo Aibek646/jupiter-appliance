@@ -1,2 +1,6 @@
 export { initAppliance } from "./residential";
-export { initSingleAppliance } from "./singleResidential";
+export {
+  initSingleAppliance,
+  sendComment,
+  fetchReview,
+} from "./singleResidential";

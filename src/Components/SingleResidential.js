@@ -3,11 +3,16 @@ import * as actions from "../store/actions/index";
 import Spinner from "./UI/Loading";
 import "./styles/SingleResidential.css";
 import "../Components/styles/SingleResidential.css";
+
 import { useDispatch, useSelector } from "react-redux";
 
 const SingleResidential = ({ match }) => {
   const id = match.params.id;
   const [loading, setLoading] = useState(false);
+
+  const reviews = useSelector((state) => {
+    return state.singleResidential.reviews;
+  });
 
   const dispatch = useDispatch();
   const singleAppliance = useSelector((state) => {
@@ -44,12 +49,6 @@ const SingleResidential = ({ match }) => {
             <li>Refrigerator is making unusually loud noises</li>
             <button className="">Order Repair</button>
           </ul>
-        </div>
-      </div>
-      <div className="review">
-        <h1>This is a review</h1>
-        <div>
-          <input type="text" />
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ const Header = () => {
       <div className="header__right">
         <HeaderOption link={"/"} Icon={HomeIcon} title="Home" />
         <HeaderOption Icon={Services} title="Service" />
-        <HeaderOption Icon={Review} title="Review" />
+        <HeaderOption link={"/review"} Icon={Review} title="Review" />
         <HeaderOption newStyle="-20px" Icon={Call} title="650-922-2494" />
       </div>
     </div>

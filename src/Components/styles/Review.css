@@ -1,0 +1,31 @@
+.review {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  min-height: calc(100vh - 235px);
+}
+
+.review > h1 {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: gray;
+  font-weight: 400;
+}
+.input-review {
+  display: flex;
+}
+
+.input__review > input {
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  border-radius: 30px;
+  width: 50%;
+  padding: 10px;
+  color: gray;
+
+  outline: none;
+}
+
+.input__review > button {
+  display: none;
+}
