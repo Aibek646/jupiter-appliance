@@ -2,6 +2,7 @@
   margin-top: 40px;
   display: flex;
   flex-direction: column;
+
   margin-bottom: 100px;
   min-height: calc(100vh - 235px);
 }
@@ -20,12 +21,50 @@
   border: 1px solid lightgray;
   border-radius: 30px;
   width: 50%;
-  padding: 10px;
+  padding: 50px 10px 50px 10px;
   color: gray;
 
   outline: none;
 }
 
-.input__review > button {
-  display: none;
+.button__div {
+  display: flex;
+  justify-content: center;
+}
+
+.button__div > button {
+  margin-top: 15px;
+  padding: 10px;
+  margin-right: 37%;
+  border-radius: 30px;
+  color: black;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  width: 15%;
+  border: 1px solid lightgray;
+  transition: ease-out 1s;
+}
+
+.button__div > button:hover {
+  background-color: rgb(214, 203, 174);
+}
+
+.outer__comment__box {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.comment__box {
+  margin-top: 20px;
+  display: flex;
+  border: 1px solid rgba(211, 211, 211, 0);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 10px 30px 10px;
 }

@@ -1,11 +1,13 @@
 import React from "react";
 import "../Components/styles/Main.css";
 import Post from "./Post";
+import { Paper, makeStyles } from "@material-ui/core";
 
 const Main = ({ history }) => {
   const residentialPage = () => {
     history.push("/residential");
   };
+
   return (
     <div className="main">
       <div className="first__col">

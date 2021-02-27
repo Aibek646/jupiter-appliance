@@ -10,10 +10,6 @@ const SingleResidential = ({ match }) => {
   const id = match.params.id;
   const [loading, setLoading] = useState(false);
 
-  const reviews = useSelector((state) => {
-    return state.singleResidential.reviews;
-  });
-
   const dispatch = useDispatch();
   const singleAppliance = useSelector((state) => {
     return state.singleResidential.appliance;

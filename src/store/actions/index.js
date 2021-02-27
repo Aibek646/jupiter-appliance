@@ -4,3 +4,5 @@ export {
   sendComment,
   fetchReview,
 } from "./singleResidential";
+
+export { auth } from "./auth";

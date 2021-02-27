@@ -1,0 +1,19 @@
+.new__button {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.x__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.create__button {
+  position: absolute;
+  left: 150px;
+  bottom: 30px;
+}

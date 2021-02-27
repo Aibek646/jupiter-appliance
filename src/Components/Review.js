@@ -30,25 +30,33 @@ const Review = () => {
 
   useEffect(() => {
     onFetchReview();
-  });
+  }, [onFetchReview]);
 
   return (
     <div className="review">
       <h1>Leave us some review</h1>
       <div>
-        {" "}
         <form className="input__review">
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             type="text"
           />
-          <button onClick={sentPost}>Send</button>
+          <div className="button__div">
+            <button onClick={sentPost}>Post Comment</button>
+          </div>
         </form>
         {reviews ? (
           <ul>
             {reviews.map((review) => {
-              return <li>{review.comment}</li>;
+              return (
+                <div className="outer__comment__box">
+                  <div className="comment__box">
+                    <h1>Name</h1>
+                    <p>{review.comment}</p>
+                  </div>
+                </div>
+              );
             })}
           </ul>
         ) : (
