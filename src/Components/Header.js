@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "../Components/styles/Header.css";
-
+import { useSelector, useDispatch } from "react-redux";
+import * as actions from "../store/actions/index";
 import HeaderOption from "../Components/HeaderOption";
 import HomeIcon from "@material-ui/icons/Home";
 import Services from "@material-ui/icons/Build";
@@ -13,6 +14,26 @@ import AuthForm from "../Components/UI/AuthForm";
 const Header = () => {
   const [openLogin, setOpenLogin] = useState(false);
   const [form, changeForm] = useState(false);
+  const dispatch = useDispatch();
+
+  const onAuthChange = useCallback(() => dispatch(actions.authIsSignUp()), [
+    dispatch,
+  ]);
+
+  const onAuthChange2 = useCallback(() => {
+    dispatch(actions.authIsSignUp2());
+  });
+
+  const select = () => {
+    changeForm(true);
+    onAuthChange();
+  };
+
+  const openLoginModal = () => {
+    setOpenLogin(true);
+    onAuthChange2();
+  };
+
   const close = () => {
     changeForm(false);
     setOpenLogin(false);
@@ -25,7 +46,7 @@ const Header = () => {
       <div className="header__right">
         <HeaderOption link={"/"} Icon={HomeIcon} title="Home" />
         <HeaderOption
-          onClick={() => setOpenLogin(true)}
+          onClick={openLoginModal}
           link={"#"}
           Icon={Face}
           title="Login"
@@ -39,7 +60,7 @@ const Header = () => {
           openLogin={openLogin}
           setOpenLogin={setOpenLogin}
         >
-          <AuthForm form={form} select={() => changeForm(true)} close={close} />
+          <AuthForm form={form} select={select} close={close} />
         </ModalForm>
       </div>
     </div>

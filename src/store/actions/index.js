@@ -5,4 +5,4 @@ export {
   fetchReview,
 } from "./singleResidential";
 
-export { auth } from "./auth";
+export { auth, authIsSignUp, authIsSignUp2 } from "./auth";

@@ -27,7 +27,7 @@ const Residential = ({ match, history }) => {
 
   useEffect(() => {
     onInitAppliances();
-  }, []);
+  }, [onInitAppliances]);
 
   return (
     <div className="residential">

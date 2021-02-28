@@ -3,29 +3,45 @@ import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../store/actions/index";
 import "../Components/styles/Review.css";
 import Spinner from "../Components/UI/Loading";
+import Login from "../Components/UI/AuthForm";
 
 const Review = () => {
   const [input, setInput] = useState("");
+  const [showLogin, setShowLogin] = useState(false);
+
   const dispatch = useDispatch();
 
   const reviews = useSelector((state) => {
     return state.singleResidential.reviews;
   });
 
+  const isAuth = useSelector((state) => {
+    return state.auth.isSignUp;
+  });
+
+  const token = useSelector((state) => {
+    return state.auth.token;
+  });
+
   const onSendPost = useCallback(
-    (comment) => dispatch(actions.sendComment(comment)),
+    (comment, token) => dispatch(actions.sendComment(comment, token)),
     [dispatch]
   );
   const onFetchReview = useCallback(() => dispatch(actions.fetchReview()), [
     dispatch,
   ]);
+
   const sentPost = (event) => {
     event.preventDefault();
-    const comments = {
-      comment: input,
-    };
-    onSendPost(comments);
-    setInput("");
+    if (!token) {
+      setShowLogin(true);
+    } else {
+      const comments = {
+        comment: input,
+      };
+      onSendPost(comments, token);
+      setInput("");
+    }
   };
 
   useEffect(() => {

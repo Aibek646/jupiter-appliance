@@ -44,11 +44,12 @@ export const sendCommentFailed = (error) => {
   };
 };
 
-export const sendComment = (orderData) => {
+export const sendComment = (orderData, token) => {
   return (dispatch) => {
     axios
       .post(
-        "https://jupiter-appliance-default-rtdb.firebaseio.com/comments.json",
+        "https://jupiter-appliance-default-rtdb.firebaseio.com/comments.json?auth?" +
+          token,
         orderData
       )
       .then((res) => {
